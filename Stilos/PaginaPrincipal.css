@@ -1,10 +1,52 @@
+@font-face {
+    font-family: 'Etna';
+    src: url('letra/Etna-Sans-serif.otf') format('opentype');
+}
+/* Posicionamiento del fondo */
+.fondo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.img-fondo {
+    position: absolute;
+    opacity: 0.8; /* Transparencia para que las imágenes se mezclen con el fondo */
+}
+
+.izquierda-arriba {
+    top: 400px;
+    left: -200px;
+    width: 700px; /* Ajusta el tamaño de las imágenes según sea necesario */
+}
+
+.izquierda-abajo {
+    top: 200px;
+    left: 150px;
+    width: 200px; /* Ajusta el tamaño de las imágenes según sea necesario */
+}
+
+.derecha-arriba {
+    top: 500px;
+    right: -100px;
+    width: 400px; /* Ajusta el tamaño de las imágenes según sea necesario */
+}
+
+.derecha-abajo {
+    top: 70px;
+    right: 250px;
+    width: 600px; /* Ajusta el tamaño de las imágenes según sea necesario */
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #FFD700; /* Fondo dorado */
-    color: #000; /* Texto negro */
+    color: #000;
     position: relative;
     overflow-x: hidden;
+    overflow: hidden;
+    font-family: 'Etna', sans-serif;
 }
 
 header {
@@ -13,28 +55,28 @@ header {
     top: 0;
     left: 0;
     display: flex;
-    justify-content: center; /* Centra el contenido del header */
+    justify-content: center;
     padding: 30px 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
+    background-color: rgba(255, 255, 255, 0.9);
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para darle un efecto de elevación */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .header-content {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Distribuye el contenido hacia los extremos */
+    justify-content: space-between;
     gap: 50px;
     max-width: 1280px;
-    width: 100%; /* Asegura que el contenido ocupe toda la fila disponible */
+    width: 100%;
 }
 
 h1 {
-    color: #000; /* Color negro */
+    color: #000;
     font-size: 1.8em;
     margin: 0;
     padding-left: 30px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Etna', sans-serif;
 }
 
 .menu ul {
@@ -48,12 +90,11 @@ h1 {
 
 .menu a {
     text-decoration: none;
-    color: #000; /* Texto del menú en negro */
+    color: #000;
     font-weight: bold;
     font-size: 1.3em;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-left: 30PX;
-
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 30px;
 }
 
 main {
@@ -61,7 +102,8 @@ main {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 120px 20px 20px 10px; /* Ajuste de espacio para el encabezado fijo */
+    padding: 120px 20px 20px 10px;
+    position: absolute;
 }
 
 .content {
@@ -82,19 +124,20 @@ main {
 }
 
 .text-content h2 {
-    color: #000; /* Título en negro */
+    color: #000;
     margin: 0 0 10px;
     font-size: 3em;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .text-content p {
-    color: #000; /* Texto en blanco */
+    color: #000;
     margin: 0;
     text-align: justify;
     font-size: 1.5em;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 
 
 

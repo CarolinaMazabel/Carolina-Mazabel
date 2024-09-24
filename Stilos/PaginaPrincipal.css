@@ -2,6 +2,24 @@
     font-family: 'Etna';
     src: url('letra/Etna-Sans-serif.otf') format('opentype');
 }
+/* Estilos para la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra de desplazamiento */
+  }
+  
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color del fondo de la barra de desplazamiento */
+  }
+  
+::-webkit-scrollbar-thumb {
+    background: #888; /* Color del "pomo" de la barra de desplazamiento */
+    border-radius: 5px; /* Bordes redondeados del "pomo" */
+  }
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+
+}
 /* Posicionamiento del fondo */
 .fondo {
     position: relative;
@@ -45,7 +63,7 @@ body {
     color: #000;
     position: relative;
     overflow-x: hidden;
-    overflow: hidden;
+    /*overflow: hidden;*/
     font-family: 'Etna', sans-serif;
 }
 
@@ -103,7 +121,9 @@ main {
     justify-content: center;
     width: 100%;
     padding: 120px 20px 20px 10px;
-    position: absolute;
+    /* Remove position absolute to allow natural flow of content */
+    position: relative; 
+    margin-bottom: 100px; /* Add space below main for the new content */
 }
 
 .content {
@@ -137,8 +157,102 @@ main {
     font-size: 1.5em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+/* Espaciado y estilo para los nuevos contenedores debajo de main */
+/* Styling for the new containers */
+.micropuntura-info {
+    margin-top: 50px;
+    text-align: center;
+}
 
+.micropuntura-info h2 {
+    font-size: 2.5em;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+.micropuntura-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 10px;
+    padding-bottom: 50px;
+    height: 500px;
+}
 
+.imagen-lado img {
+    width: 400px;
+}
 
+.texto-lado {
+    background-color:rgba(255, 255, 255, 0.9);
+    opacity: 0.9;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.4em;
+    text-align: justify;
+    width: 400px;
+}
+.imagen-lado {
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Apila verticalmente */
+    align-items: center;
+}
 
+.image-container {
+    position: relative; /* Para permitir que los botones se posicionen relativos a este contenedor */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+}
+.image-container img {
+    width: 450px; /* Ajusta el ancho de las imágenes al 100% del contenedor */
+    max-width: 500px; /* Establece un ancho máximo específico para todas las imágenes */
+    max-height: 450px; /* Establece una altura máxima específica para todas las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el área asignada sin distorsionarse */
+}
+
+.navigation {
+    position: absolute; /* Permite posicionar los botones sobre el contenedor */
+    top: 50%; /* Centra verticalmente */
+    transform: translateY(-50%); /* Ajuste para centrar el botón verticalmente */
+    width: 100%; /* Asegura que la navegación ocupe todo el ancho */
+    display: flex; /* Usa flexbox para alinear los botones */
+    justify-content: space-between; /* Espacia los botones a los lados */
+    padding: 0 10px; /* Espacio a los lados para que no estén pegados a los bordes */
+}
+
+.nav-btn {
+    background-color: #fff; /* Color de fondo del botón */
+    border: none; /* Sin borde */
+    border-radius: 50%; /* Botón circular */
+    width: 40px; /* Ancho del botón */
+    height: 40px; /* Alto del botón */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    font-size: 24px; /* Tamaño de la flecha */
+    color: #000; /* Color del texto */
+    transition: background-color 0.3s; /* Transición para el color de fondo */
+}
+
+.nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Efecto hover */
+}
+
+.image-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0 5px;
+    border: 1px solid #000;
+}
+
+.indicator.active {
+    background-color: #000; /* Cambia el color del círculo activo */
+}
